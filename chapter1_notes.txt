@@ -1,0 +1,88 @@
+1-Why write parallel programs?
+
+-The speed of single-core chips has decreased since 2002.
+
+-Instead of putting event faster single-core processors, manufacturers wenti into parallelism.
+
+-The CPU having more cores doesn´t affect serial programs.
+
+-Serial programs = run on only 1 core.
+
+-Without the advance in computing power, we couldn´t solve many problems that we have today such as protein folding, drug discovery,etc.
+
+-Why we are building parallel systems?
+
+-The speed in single-core programs is determined by the density of the transistor. The smaller the transistor,the more you can fit on a single chip, making it speed even faste. But this come with a price, the faster the chip, the more energy it will need to spend in form of heat. Energy is dissipeated as heat, if a chip is hot it becomes unreliable.
+
+---
+Return to question #1 (Why write parallel programs?)
+
+if the programmer write a program without using parallel structures, his algorithm will be serial. To fix this we have 2 options.
+
+1- Learn how to write parallel programs.
+
+2-Use "translator" to translate our programs  for parallel architectures (wich rarelys is useful and reliable).
+
+
+serial sum of n items:
+int s,i;
+s=0;
+for(i = 0;i<n;i++){
+  x=compute_next_value();
+  s += x;
+}
+
+parallel version (assuming the number of cores (p) is much smaller than n)
+int s;
+s = 0;
+
+my_first_i = ...;
+my_last_i=...;
+for(my_i = my_first_i;my_i < my_last_i;my_i ++){
+  my_x = compute_next_value();
+  s += my_x;
+}
+
+=======
+shared memory vs distributed memory
+
+shared memory = the cores can share acess to a computer´s memory system.
+
+distributed memory = Each core has it own private memory, and the cores must comunicate trougt a network.
+
+=======
+
+Core 0 -   |      |
+           |      |
+Core 1 -   |      |  
+           |Memory|
+...        |      |
+           |      |
+Core P - 1 |      |
+
+
+
+Core 0- Memory 0 -            |       |
+                              |       |
+Core 1 - Memory 1 -           |       |  
+                              |Network|
+...                           |       |
+                              |       |
+Core P - 1 - Memory p-1-      |       |
+
+
+
+=======
+
+
+Concurrent / Parallel / Distributed
+
+Concurrent: A program is one in wich multiple tasks can be in progress at any instance.
+
+Paralell:A program is one in wich multiple tasks cooperate closely to solve a problem.
+
+Distributed:A program may need to cooperate with other programs to solve a problem.
+
+=======
+
+
