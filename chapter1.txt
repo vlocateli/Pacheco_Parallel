@@ -2,7 +2,7 @@
 
 -The speed of single-core chips has decreased since 2002.
 
--Instead of putting event faster single-core processors, manufacturers wenti into parallelism.
+-Instead of putting even faster single-core processors, manufacturers went into parallelism.
 
 -The CPU having more cores doesn´t affect serial programs.
 
@@ -12,7 +12,7 @@
 
 -Why we are building parallel systems?
 
--The speed in single-core programs is determined by the density of the transistor. The smaller the transistor,the more you can fit on a single chip, making it speed even faste. But this come with a price, the faster the chip, the more energy it will need to spend in form of heat. Energy is dissipeated as heat, if a chip is hot it becomes unreliable.
+-The speed in single-core programs is determined by the density of the transistor. The smaller the transistor,the more you can fit on a single chip, making it speed even faster. But this come with a price, the faster the chip, the more energy it will need to spend in form of heat. Energy is dissipeated as heat, if a chip is hot it becomes unreliable.
 
 ---
 Return to question #1 (Why write parallel programs?)
